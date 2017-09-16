@@ -49,8 +49,7 @@ func readConfig() ([3]int, [][3]string) {
 			host, user, name = "", "", ""
 		}
 	}
-	rslt = append(rslt, [3]string{user, name, host})
-	return longestValues, rslt
+	return longestValues, append(rslt, [3]string{user, name, prevHost})
 }
 
 func main() {
